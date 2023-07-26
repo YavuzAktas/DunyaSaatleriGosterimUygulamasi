@@ -3,9 +3,12 @@ import 'package:get/route_manager.dart';
 import 'package:world_clock_case/route/app_page.dart';
 import 'package:world_clock_case/route/app_route.dart';
 import 'package:world_clock_case/theme/app_theme.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
-  runApp(const MyApp());
+  initializeDateFormatting('tr_TR').then((_) {
+    runApp(MyApp());
+  });
 }
 
 class MyApp extends StatelessWidget {

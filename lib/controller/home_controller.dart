@@ -24,7 +24,6 @@ class HomeController extends GetxController {
         timezones.assignAll(temperaturesFromJson(result.body));
       }
     } finally {
-      print(timezones.first);
       isCountryLoading(false);
     }
   }

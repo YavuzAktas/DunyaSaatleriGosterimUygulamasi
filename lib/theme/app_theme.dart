@@ -6,6 +6,7 @@ class AppTheme {
   static Color lightPrimaryColor = const Color(0XFFE3EEFF);
   static Color lightSecondaryColor = const Color(0XFF002359);
   static Color lightTextColor = const Color(0XFF002359);
+  static Color strokeBlue = const Color(0xFF8FAFE0);
 
   const AppTheme._();
 
