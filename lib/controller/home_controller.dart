@@ -1,14 +1,13 @@
 import 'package:get/get.dart';
+import 'package:world_clock_case/model/timeData_model.dart';
 import 'package:world_clock_case/model/timezone_model.dart';
 import 'package:world_clock_case/service/timezone_service/timezone_service.dart';
 
 class HomeController extends GetxController {
   static HomeController instance = Get.find();
 
-  RxBool isCountryLoading = false.obs;
+  var isCountryLoading = false.obs;
   var timezones = <String>[].obs;
-  var isLoading = true.obs;
-  var errorMessage = ''.obs;
 
   @override
   void onInit() {

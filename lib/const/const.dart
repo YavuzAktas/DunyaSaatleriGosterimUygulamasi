@@ -4,6 +4,7 @@ String baseUrl = 'http://worldtimeapi.org/api/timezone/';
 
 enum IconConstants {
   header('header'),
+  header2('header2'),
   day('day'),
   night('night');
 

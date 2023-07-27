@@ -4,7 +4,9 @@ import 'package:intl/intl.dart';
 import 'package:world_clock_case/component/main_header.dart';
 import 'package:world_clock_case/const/const.dart';
 import 'package:world_clock_case/controller/controller.dart';
+import 'package:world_clock_case/controller/home_controller.dart';
 import 'package:world_clock_case/theme/app_theme.dart';
+import 'package:world_clock_case/view/localTime/localTime_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -94,8 +96,18 @@ class HomeScreen extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: homeController.timezones.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return ListTile(
-                      title: Text(homeController.timezones[index]),
+                    return GestureDetector(
+                      onTap: () {
+                        Get.to(() => LocalTimeScreen(
+                            url: "/${homeController.timezones[index]}"));
+                      },
+                      child: ListTile(
+                        title: Text(homeController.timezones[index]),
+                        trailing: Icon(
+                          Icons.arrow_circle_right_outlined,
+                          color: AppTheme.lightTextColor,
+                        ),
+                      ),
                     );
                   },
                 ),
