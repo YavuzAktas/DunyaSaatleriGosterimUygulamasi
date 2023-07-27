@@ -111,6 +111,16 @@ class LocalTimeScreen extends StatelessWidget {
                         height: 25,
                       ),
                       Text(
+                        controller.timeData.value.datetime.toString(),
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w600,
+                            color: AppTheme.lightTextColor),
+                      ),
+                      SizedBox(
+                        height: 25,
+                      ),
+                      Text(
                         controller.timeData.value.timezone.split('/').first,
                         style: TextStyle(
                             fontSize: 24,
